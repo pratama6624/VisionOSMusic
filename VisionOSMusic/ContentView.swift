@@ -12,19 +12,9 @@ import RealityKitContent
 struct ContentView: View {
     var body: some View {
         NavigationSplitView {
-            List {
-                Text("Item")
-            }
-            .navigationTitle("Sidebar")
+            SideBarView()
         } detail: {
-            VStack {
-                Model3D(named: "Scene", bundle: realityKitContentBundle)
-                    .padding(.bottom, 50)
-                
-                Text("Hello, world")
-            }
-            .navigationTitle("Content")
-            .padding()
+            // Album here
         }
     }
 }
